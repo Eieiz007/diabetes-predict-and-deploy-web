@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+        input {
+        caret-color: red;
+        }
+
+        body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("{% static 'images/p1.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: auto;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        place-items: center;
+        overflow: hidden;
+        font-family: poppins;
+        }
+
+        .container {
+        position: relative;
+        /* width: 350px;
+        height: 400px; */
+        /* width: auto; */
+        width: 350px;
+        height: auto;
+        border-radius: 20px;
+        padding: 40px;
+        box-sizing: border-box;
+        background: #ecf0f3;
+        box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+        }
+
+        .brand-title {
+        margin-top: auto;
+        font-weight: 900;
+        font-size: 1.8rem;
+        color: #1DA1F2;
+        letter-spacing: 1px;
+        }
+
+        .inputs {
+        text-align: left;
+        margin-top: 30px;
+        }
+
+        label, input, button {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        }
+
+  
+
+        input {
+        color: white;
+        margin-top: 20px;
+        background: #1DA1F2;
+        height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 900;
+        box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+        transition: 0.5s;
+        }
+
+        input:hover {
+        box-shadow: none;
+        }
+
+        h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+    /* background-image: url("{% static 'images/p1.jpg' %}"); */
+         
+    </style>
+</head>
+<body>
+    <!-- <div align="center">
+        <h1>
+            WELCOME TO DIABETES PREDICTION SYSTEM
+        </h1>
+        <form action="predict" method="get">
+            <input type="submit" value="Welcome">
+        </form>
+    </div> -->
+    <div class="container">
+        <div class="brand-logo"></div>
+        <div class="brand-title">WELCOME TO PREDICTION</div>
+        <div class="inputs">
+            <form action="predict" method="get">
+                <input type="submit" value="PREDICT">
+            </form>
+            <form action="bmi" method="get">
+                <input type="submit" value="BMI">
+            </form>
+</body>
+</html>

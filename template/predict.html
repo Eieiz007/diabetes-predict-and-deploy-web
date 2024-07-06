@@ -1,0 +1,180 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>predict</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+        /* body {
+        background-image: url("{% static 'images/p3.png' %}");
+        }  */
+        body {
+            background-image: url("{% static 'images/p3.png' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            margin-top: 15%;
+            /* align-items: center; */
+            /* text-align: center; */
+            justify-content: center;
+            /* place-items: center; */
+            /* overflow: hidden; */
+            
+        }
+        .main{
+            /* position: fixed; */
+            /* top: 100px; */
+            /* left: 400px; */
+            height: auto;
+            width: 400px;
+            /* background-color:#ffffff; */
+            background: #ffffff;
+            /* background: linear-gradient(to left, #91eae4, #86a8e7, #7f7fd5); */
+            border-radius: 10px;
+            align-items: center;
+            padding: 2%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            /* border-width: 10px; */
+            /* border-style: solid; */
+            /* border-color: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%); */
+        }
+   
+        h1{
+            color: #000000;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;;
+        }
+        input[type=reset]{
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;
+        }
+        input[type=text]{
+           color: #5468ff;
+
+        }
+        input[type=submit]:hover,input[type=reset]:hover{
+            opacity: 0.5;
+        }
+        h2.gg{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div align = "center" class="main">
+        <h1>ระบบทำนายโรคเบาหวาน</h1>
+        <h2>กรอกข้อมูล</h2>
+        <form action = "Test">
+            <table >
+                <tr >
+                    <td align="right" >อายุ:</td>
+                    <td align="left"><input type="text" name = "n1" value={{text1}} ></td>
+                    <!-- value={{text1}} -->
+                </tr>
+                
+                <tr>
+                    <td align="right">ดัชนีมวลกาย:</td>
+                    <td align="left"><input type="text" name = "n2" value={{text2}} ></td>
+                    <!-- value={{text2}} -->
+                </tr>
+                    
+                <tr>
+                    <td align="right">ครั้งที่ตั้งครรภ์:</td>
+                    <td align="left"><input type="text" name = "n3" value={{text3}}></td>
+                    <!-- value={{text3}} -->
+                </tr>
+    
+                <tr>
+                    <td align="right">น้ำตาลในเลือด:</td>
+                    <td align="left"><input type="text" name = "n4" value={{text4}}></td>
+                    <!-- value={{text4}} -->
+                </tr>
+    
+                
+    
+            </table><br>
+            <input type="submit" value="PREDICT">
+            &emsp;
+            <!-- <input type="submit" value="Go back!" onclick="history.back()"> -->
+                
+            <h2 class="gg">{{name}}</h2>
+            <h3>ระดับน้ำตาลในเลือด ก่อนอาหารเช้า 70-105<br>
+                หลังอาหาร 1 ชม. น้อยกว่า 160<br>
+                หลังอาหาร 2 ชม. น้อยกว่า 120
+            </h3>
+            <!-- <h3 align = 'left'></h3> -->
+        </form>
+        
+        
+
+
+        <!-- <form action="home" method="get">
+            <input type="submit" value="CLEAR">
+        </form> -->
+        <!-- <form action = "clear">
+            <input type="submit" value="CLEAR"> ต้องเรียน javascript 
+        </form> -->
+    </div>
+</body>
+</html>

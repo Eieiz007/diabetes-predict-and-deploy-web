@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>predict</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+        /* body {
+        background-image: url("{% static 'images/p3.png' %}");
+        }  */
+        body {
+            background-image: url("{% static 'images/p3.png' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            margin-top: 15%;
+            /* align-items: center; */
+            /* text-align: center; */
+            justify-content: center;
+            /* place-items: center; */
+            /* overflow: hidden; */
+            
+        }
+        .main{
+            /* position: fixed; */
+            /* top: 100px; */
+            /* left: 400px; */
+            height: auto;
+            width: 400px;
+            /* background-color:#ffffff; */
+            background: #ffffff;
+            /* background: linear-gradient(to left, #91eae4, #86a8e7, #7f7fd5); */
+            border-radius: 10px;
+            align-items: center;
+            padding: 2%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            /* border-width: 10px; */
+            /* border-style: solid; */
+            /* border-color: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%); */
+        }
+   
+        h1{
+            color: #000000;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;;
+        }
+        input[type=reset]{
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;
+        }
+        input[type=text]{
+           color: #5468ff;
+
+        }
+        input[type=submit]:hover,input[type=reset]:hover{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div align = "center" class="main">
+        <h1>ดัชนีมวลกาย</h1>
+        <h2>กรอกข้อมูล</h2>
+            <form action="bmii">
+                <table>
+                <tr>
+                    <td align="right">ส่วนสูง:</td>
+                    <td align="left"><input type="text" name = "bb1" value={{text5}}></td>
+                </tr>
+    
+                <tr>
+                    <td align="right">น้ำหนัก:</td>
+                    <td align="left"><input type="text" name = "bb2" value={{text6}}></td>
+                </tr>
+                </table><br>
+    
+                <input type="submit" value="RESULT">&emsp;
+                <h2>{{bbb}}</h2>
+                <h2>{{aaa}}</h2>
+            </form>
+            
+    </div>
+</body>
+</html>
